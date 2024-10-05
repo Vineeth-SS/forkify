@@ -1,7 +1,13 @@
 import { async } from 'regenerator-runtime';
-import { API_URL, RES_PER_PAGE, KEY } from './config.js';
+// import { API_URL, RES_PER_PAGE, KEY } from './config.js';
 // import { getJSON, sendJSON } from './helpers.js';
 import { AJAX } from './helpers.js';
+require('dotenv').config();
+
+
+API_URL = process.env.API_URL;
+RES_PER_PAGE = process.env.RES_PER_PAGE
+KEY = process.env.KEY
 
 export const state = {
   recipe: {},
